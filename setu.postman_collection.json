@@ -1,0 +1,564 @@
+{
+	"info": {
+		"_postman_id": "041b310e-7e10-4b0b-a623-e95141e7c7eb",
+		"name": "setu",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4541125"
+	},
+	"item": [
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"myusername\",\n    \"password\": \"123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5555/auth/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5555",
+					"path": [
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"myusername\",\n    \"password\": \"123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5555/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5555",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "profile",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0MTA5ODg2NSwianRpIjoiY2U2MjY4NjItZTIyMC00ODI2LWE3NzMtYWM5ZWI5OWMyMGVkIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6Im15dXNlcm5hbWUiLCJuYmYiOjE3NDEwOTg4NjUsImNzcmYiOiI3MWNmNzFmZS1kZWQyLTRhMjYtODdmMS1hYTc2ZTk2MTI0MjMiLCJleHAiOjE3NDEwOTk3NjV9.uh7-2tzvAVTgG7cbTGOxnmW4Atlr7NqyHvfZbiusWDA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5555/profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5555",
+					"path": [
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "profile",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0MTA5ODg2NSwianRpIjoiY2U2MjY4NjItZTIyMC00ODI2LWE3NzMtYWM5ZWI5OWMyMGVkIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6Im15dXNlcm5hbWUiLCJuYmYiOjE3NDEwOTg4NjUsImNzcmYiOiI3MWNmNzFmZS1kZWQyLTRhMjYtODdmMS1hYTc2ZTk2MTI0MjMiLCJleHAiOjE3NDEwOTk3NjV9.uh7-2tzvAVTgG7cbTGOxnmW4Atlr7NqyHvfZbiusWDA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"phone\": 9895072802,\n    \"email\": \"latheef@latheef.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5555/profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5555",
+					"path": [
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0MTA5ODg2NSwianRpIjoiY2U2MjY4NjItZTIyMC00ODI2LWE3NzMtYWM5ZWI5OWMyMGVkIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6Im15dXNlcm5hbWUiLCJuYmYiOjE3NDEwOTg4NjUsImNzcmYiOiI3MWNmNzFmZS1kZWQyLTRhMjYtODdmMS1hYTc2ZTk2MTI0MjMiLCJleHAiOjE3NDEwOTk3NjV9.uh7-2tzvAVTgG7cbTGOxnmW4Atlr7NqyHvfZbiusWDA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"phone\": 9895072802,\n    \"email\": \"latheef@latheef.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5555/search?q=la",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5555",
+					"path": [
+						"search"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "la"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search friend",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0MTA5ODg2NSwianRpIjoiY2U2MjY4NjItZTIyMC00ODI2LWE3NzMtYWM5ZWI5OWMyMGVkIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6Im15dXNlcm5hbWUiLCJuYmYiOjE3NDEwOTg4NjUsImNzcmYiOiI3MWNmNzFmZS1kZWQyLTRhMjYtODdmMS1hYTc2ZTk2MTI0MjMiLCJleHAiOjE3NDEwOTk3NjV9.uh7-2tzvAVTgG7cbTGOxnmW4Atlr7NqyHvfZbiusWDA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"phone\": 9895072802,\n    \"email\": \"latheef@latheef.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5555/search/friend?q=la",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5555",
+					"path": [
+						"search",
+						"friend"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "la"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "connect",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0MTEwMDAxNywianRpIjoiZWMxYjU1NGYtNThjYS00NDUwLWJhODAtYWY2NzllNzE5MjVlIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6Im15dXNlcm5hbWUiLCJuYmYiOjE3NDExMDAwMTcsImNzcmYiOiIwNDRjYWE1Ny0xNmIyLTQ1NjQtOTFiZi1lYmYyZTljYjhmZWEiLCJleHAiOjE3NDExMDA5MTd9.pckfhyju6wigfOWDFT8Ca5UNH0YYyBPaccb5coqMyXQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"receiver\": \"www\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5555/connect",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5555",
+					"path": [
+						"connect"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "connect",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0MTEwMDQ4OCwianRpIjoiZWFjMjZlNGUtYjQ5My00MzI4LTgxNWUtMTU5OGVmYmQxMGUzIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6Ind3dyIsIm5iZiI6MTc0MTEwMDQ4OCwiY3NyZiI6IjExMWU5NDY2LWMxMzItNDFmOC1hMmJkLWY0ZWQxZjM4YTVjZiIsImV4cCI6MTc0MTEwMTM4OH0.DNBM-lkohqCE403hKM02WnQCLeXHgFS9byw25CvpXtE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"phone\": 9895072802,\n    \"email\": \"latheef@latheef.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5555/connect",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5555",
+					"path": [
+						"connect"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "connect",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0MTEwMDQ4OCwianRpIjoiZWFjMjZlNGUtYjQ5My00MzI4LTgxNWUtMTU5OGVmYmQxMGUzIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6Ind3dyIsIm5iZiI6MTc0MTEwMDQ4OCwiY3NyZiI6IjExMWU5NDY2LWMxMzItNDFmOC1hMmJkLWY0ZWQxZjM4YTVjZiIsImV4cCI6MTc0MTEwMTM4OH0.DNBM-lkohqCE403hKM02WnQCLeXHgFS9byw25CvpXtE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"action\": \"accept\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5555/connect/1/action",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5555",
+					"path": [
+						"connect",
+						"1",
+						"action"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "expense",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0MTEwMTY4MiwianRpIjoiNjRiMTUxZDYtYzYwNS00NzNhLWIwNjQtMWJiNDc4OTM3ZWI3IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6Im15dXNlcm5hbWUiLCJuYmYiOjE3NDExMDE2ODIsImNzcmYiOiIzNTllNzNhNC0yZmRhLTQwZGEtYjc2YS1hMWEyNGM0NTNkNTAiLCJleHAiOjE3NDExMDI1ODJ9.a9k9AfRylxUkU413fQlFNWJa6ubpkeWMffzqi5CFUqw"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"total_amount\": 100,\n    \"note\": \"Dinner\",\n    \"date\": \"2025-03-04\",\n    \"split\": [\n        {\"username\": \"www\", \"amount\": 50}\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5555/expense",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5555",
+					"path": [
+						"expense"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "expense",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{TOKEN}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"total_amount\": 100,\n    \"note\": \"Dinner\",\n    \"date\": \"2025-03-04\",\n    \"split\": [\n        {\"username\": \"www\", \"amount\": 50}\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5555/expense",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5555",
+					"path": [
+						"expense"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "expense",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{TOKEN}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"total_amount\": 100,\n    \"note\": \"Dinner\",\n    \"date\": \"2025-03-04\",\n    \"split\": [\n        {\"username\": \"www\", \"amount\": 50}\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5555/expense/1/close",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5555",
+					"path": [
+						"expense",
+						"1",
+						"close"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "net-settlement",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{TOKEN1}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"total_amount\": 100,\n    \"note\": \"Dinner\",\n    \"date\": \"2025-03-04\",\n    \"split\": [\n        {\"username\": \"www\", \"amount\": 50}\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5555/expense/net-settlement?usernames=2&usernames=3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5555",
+					"path": [
+						"expense",
+						"net-settlement"
+					],
+					"query": [
+						{
+							"key": "usernames",
+							"value": "2"
+						},
+						{
+							"key": "usernames",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "net-settlement",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{TOKEN1}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"username\": \"abc3\" }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5555/expense/net-settlement",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5555",
+					"path": [
+						"expense",
+						"net-settlement"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "TOKEN1",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0MTExNzYwOCwianRpIjoiNmUwNGEyZmItMzA0MC00YmQwLTk5ZTctMDQwY2E1OTZlOTQyIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFiYzEiLCJuYmYiOjE3NDExMTc2MDgsImNzcmYiOiIxZmNiZWNjMS01N2ZjLTQ4OGEtOGVkOC01NzhiOWY4MzU4MDIiLCJleHAiOjE3NDExNjA4MDh9.YzYlNPD4gppGzsF-nS_7J7mfaiWe_heVkrZUB3cCv0c"
+		},
+		{
+			"key": "TOKEN2",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0MTExNzY0MCwianRpIjoiOThmZWIzNjctODZkNC00MmU4LTgwNDctMDc5ZGJlMGIzOTcxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFiYzIiLCJuYmYiOjE3NDExMTc2NDAsImNzcmYiOiIxMjgwYmZmMi0wNzcwLTQxMjgtYjI0YS1hYjRjMTM2N2E3N2QiLCJleHAiOjE3NDExNjA4NDB9.dgdonmfSo2Od-efeAGIMJUpJD-7cpPpTJwlFihu_EQA",
+			"type": "string"
+		},
+		{
+			"key": "TOKEN3",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0MTExNzY2NywianRpIjoiMmQ1OGM1OWItM2RkZC00ZjlmLWFjOGUtOWQ4OTlkZGJlMTJjIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFiYzMiLCJuYmYiOjE3NDExMTc2NjcsImNzcmYiOiI1ZWRkMjdjMy1lMjU2LTRhMGEtODEwYS0xMDdkYzVjY2E5NzEiLCJleHAiOjE3NDExNjA4Njd9.PpUX382pNZozgMJN4vI5LaadjPeLuEQHZnaSpLxaxtw",
+			"type": "string"
+		}
+	]
+}
