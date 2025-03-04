@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:latest
+    container_name: postgres-container
+    environment:
+      POSTGRES_USER: abc
+      POSTGRES_PASSWORD: 123
+      POSTGRES_DB: mydb
+    ports:
+      - "5432:5432"
+    networks:
+      - setu-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U abc -d mydb"]
+      interval: 5s
+      retries: 5
+
+  flask-app:
+    build:
+      context: ./setu
+      dockerfile: ./Dockerfile
+    container_name: setu-container
+    environment:
+      DATABASE_URL: postgresql://abc:123@postgres:5432/mydb
+      SECRET_KEY: mysecret
+      JWT_SECRET_KEY: jwtsecret
+    depends_on:
+      postgres:
+        condition: service_healthy
+    ports:
+      - "5555:5555"
+    networks:
+      - setu-network
+
+
+networks:
+  setu-network:
+    driver: bridge
