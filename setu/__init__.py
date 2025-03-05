@@ -1,16 +1,21 @@
 from flask import Flask, g
 from flask_sqlalchemy import SQLAlchemy
 from flask_jwt_extended import jwt_required, get_jwt_identity, JWTManager
+from flask_cors import CORS  # ✅ Import CORS
 
 db = SQLAlchemy()
 jwt = JWTManager()
 
-def create_app():
+def create_app(config=None):
     app = Flask(__name__)
     app.config.from_object('setu.config.Config')
 
+    if config:
+        app.config.update(config)  # ✅ Apply test-specific config
+
     db.init_app(app)
     jwt.init_app(app)
+    CORS(app, supports_credentials=True)  # ✅ Enable CORS globally
 
     with app.app_context():
         from .auth.routes import auth_bp
@@ -26,8 +31,8 @@ def create_app():
         app.register_blueprint(expense_bp, url_prefix='/expense')
 
         db.create_all()
-
     return app
+
 
 app = create_app()
 
