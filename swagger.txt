@@ -1,0 +1,302 @@
+openapi: 3.0.3
+info:
+  title: setu
+  version: 1.0.0
+  contact: {}
+servers:
+  - url: http://localhost:5555
+  - url: http://13.201.93.155:5555
+paths:
+  /auth/signup:
+    post:
+      summary: signup
+      description: signup
+      operationId: signup
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                password:
+                  type: string
+                  example: '123'
+                username:
+                  type: string
+                  example: myusername
+            examples:
+              signup:
+                value:
+                  password: '123'
+                  username: myusername
+      responses:
+        '200':
+          description: ''
+  /auth/login:
+    post:
+      summary: login
+      description: login
+      operationId: login
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                password:
+                  type: string
+                  example: '123'
+                username:
+                  type: string
+                  example: myusername
+            examples:
+              login:
+                value:
+                  password: '123'
+                  username: myusername
+      responses:
+        '200':
+          description: ''
+  /profile:
+    get:
+      summary: profile
+      description: profile
+      operationId: profile
+      responses:
+        '200':
+          description: ''
+    put:
+      summary: profile
+      description: profile
+      operationId: profile1
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  example: latheef@latheef.com
+                phone:
+                  type: number
+                  example: 9895072802
+            examples:
+              profile:
+                value:
+                  email: latheef@latheef.com
+                  phone: 9895072802
+      responses:
+        '200':
+          description: ''
+  /search:
+    get:
+      summary: search
+      description: search
+      operationId: search
+      parameters:
+        - name: q
+          in: query
+          schema:
+            type: string
+            example: la
+      responses:
+        '200':
+          description: ''
+  /search/friend:
+    get:
+      summary: search friend
+      description: search friend
+      operationId: searchFriend
+      parameters:
+        - name: q
+          in: query
+          schema:
+            type: string
+            example: la
+      responses:
+        '200':
+          description: ''
+  /connect:
+    get:
+      summary: connect
+      description: connect
+      operationId: connect1
+      responses:
+        '200':
+          description: ''
+    post:
+      summary: connect
+      description: connect
+      operationId: connect
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                receiver:
+                  type: string
+                  example: www
+            examples:
+              connect:
+                value:
+                  receiver: www
+      responses:
+        '200':
+          description: ''
+  /connect/1/action:
+    put:
+      summary: connect
+      description: connect
+      operationId: connect2
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                action:
+                  type: string
+                  example: accept
+            examples:
+              connect:
+                value:
+                  action: accept
+      responses:
+        '200':
+          description: ''
+  /expense:
+    get:
+      summary: expense
+      description: expense
+      operationId: expense1
+      responses:
+        '200':
+          description: ''
+    post:
+      summary: expense
+      description: expense
+      operationId: expense
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                date:
+                  type: string
+                  example: '2025-03-04'
+                note:
+                  type: string
+                  example: Dinner
+                split:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      amount:
+                        type: number
+                        example: 50
+                      username:
+                        type: string
+                        example: www
+                  example:
+                    - amount: 50
+                      username: www
+                total_amount:
+                  type: number
+                  example: 100
+            examples:
+              expense:
+                value:
+                  date: '2025-03-04'
+                  note: Dinner
+                  split:
+                    - amount: 50
+                      username: www
+                  total_amount: 100
+      responses:
+        '200':
+          description: ''
+  /expense/1/close:
+    put:
+      summary: expense
+      description: expense
+      operationId: expense2
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                date:
+                  type: string
+                  example: '2025-03-04'
+                note:
+                  type: string
+                  example: Dinner
+                split:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      amount:
+                        type: number
+                        example: 50
+                      username:
+                        type: string
+                        example: www
+                  example:
+                    - amount: 50
+                      username: www
+                total_amount:
+                  type: number
+                  example: 100
+            examples:
+              expense:
+                value:
+                  date: '2025-03-04'
+                  note: Dinner
+                  split:
+                    - amount: 50
+                      username: www
+                  total_amount: 100
+      responses:
+        '200':
+          description: ''
+  /expense/net-settlement:
+    get:
+      summary: net-settlement
+      description: net-settlement
+      operationId: netSettlement
+      parameters:
+        - name: usernames
+          in: query
+          schema:
+            type: string
+            example: '2'
+      responses:
+        '200':
+          description: ''
+    post:
+      summary: net-settlement
+      description: net-settlement
+      operationId: netSettlement1
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                username:
+                  type: string
+                  example: abc3
+            examples:
+              net-settlement:
+                value:
+                  username: abc3
+      responses:
+        '200':
+          description: ''
+tags: []
